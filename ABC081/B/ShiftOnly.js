@@ -1,18 +1,9 @@
 function Main(input) {
   var counter = 0;
-  const inputStrings = input.split(/\n/);
+  var inputNumbers = input.split(/\n/)[1].split(/\s/);
 
-  var sum = 0;
-  inputStrings[1].split(/\s/).forEach((num) => {
-    sum += Number(num);
-  });
-
-  while (true) {
-    if (sum % 2 == 1) {
-      break;
-    }
-
-    sum /= 2;
+  while (inputNumbers.every((num) => num % 2 === 0)) {
+    inputNumbers = inputNumbers.map((num) => num / 2);
     counter++;
   }
 
