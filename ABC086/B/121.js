@@ -1,6 +1,4 @@
-const input = require("fs")
-  .readFileSync("/dev/stdin", "utf8")
-  .trim()
-  .replace(/\s/g, "");
-const sqrt = Math.sqrt(input - 0);
-console.log(Number.isInteger(sqrt) ? "YES" : "No");
+const input = require("fs").readFileSync("/dev/stdin", "utf8");
+const number = parseInt(input.replace(" ", ""), 10);
+const square = Math.sqrt(number);
+console.log(Number.isInteger(square) ? "Yes" : "No");
